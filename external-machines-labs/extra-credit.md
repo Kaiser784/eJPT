@@ -1,8 +1,16 @@
 # Extra Credit
 
-## Corp
+{% tabs %}
+{% tab title="Corp" %}
 
-## Mr. Robot CTF
+{% endtab %}
 
-## Retro
+{% tab title="Mr Robot CTF" %}
+
+{% endtab %}
+
+{% tab title="Retro" %}
+
+{% endtab %}
+{% endtabs %}
 
