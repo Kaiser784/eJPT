@@ -4,19 +4,19 @@ description: Information Gathering and Footprinting & Scanning
 
 # Enumeration
 
-### whois
+## whois
 
 ```text
 whois foo.bar
 ```
 
-### subdomains
+## subdomains
 
 ```text
 sublit3r -d foo.bar
 ```
 
-### ping sweeps
+## ping sweeps
 
 ```text
 fping -a -g 10.10.10.10
@@ -26,7 +26,7 @@ fping -a -g 10.10.10.10
 nmpa -sn 10.10.10.10
 ```
 
-#### Multiple host ping sweep using Nmap
+### Multiple host ping sweep using Nmap
 
 {% tabs %}
 {% tab title="hosts.txt" %}
