@@ -31,8 +31,18 @@ nmap -sn 10.10.10.10
 ### OS Fingerprinting
 
 ```text
-nmap -Pn -O 10.10.10.10
+nmap -Pn -A -O 10.10.10.10
 ```
 
+### Quick scan
 
+```text
+nmap -sC -sV -A -T4 10.10.10.10
+```
+
+### Full scan
+
+```text
+nmap -sC -sV -A -T4 -p- 10.10.10.10
+```
 
