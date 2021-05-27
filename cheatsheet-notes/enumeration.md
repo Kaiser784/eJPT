@@ -19,11 +19,11 @@ sublit3r -d foo.bar
 ## ping sweeps
 
 ```text
-fping -a -g 10.10.10.10
+fping -a -g 10.10.10.0/24
 ```
 
 ```text
-nmap -sn 10.10.10.10
+nmap -sn 10.10.10.0/24
 ```
 
 ## Nmap

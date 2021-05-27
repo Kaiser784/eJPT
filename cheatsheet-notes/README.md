@@ -6,7 +6,7 @@ description: These are condensed notes from the INE course and other blogs and a
 
 ### Subnet guide
 
-![](../.gitbook/assets/subnet-guide-sheet1.png)
+![TheCybermentor&apos;s subnet guide](../.gitbook/assets/subnet-guide-sheet1.png)
 
 ### Common Ports
 
