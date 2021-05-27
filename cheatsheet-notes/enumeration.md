@@ -34,7 +34,7 @@ nmap -sn 10.10.10.10
 nmap -Pn -A -O 10.10.10.10
 ```
 
-### Quick scan
+### Quick scan 
 
 ```text
 nmap -sC -sV -A -T4 10.10.10.10

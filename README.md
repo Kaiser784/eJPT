@@ -1,4 +1,16 @@
-# My eJPT Journey
+---
+description: These are condensed notes from the INE course and other blogs and articles.
+---
 
-#### You can check my blog here: [Kaiser784's Blog](https://kaiser784.gitbook.io/kaiser784-blog/), where I share other interesting stuff and my research experiences in security. 
+# Cheatsheet/Notes
+
+## Enumeration
+
+### whois
+
+```text
+whois foo.bar
+```
+
+
 
