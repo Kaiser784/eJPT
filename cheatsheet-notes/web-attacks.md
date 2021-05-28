@@ -64,5 +64,26 @@ I'm more used to Dirbuster than dirb or gobuster and also you can change the vie
 ![Dirbuster](../.gitbook/assets/dirbuster.png)
 
 1. You can choose different wordlists for the dictionary brute force but from my experience in most labs you can find them in the `common.txt` 
-2. You can also choose different extensions but php and bak will be the most useful ones to find.
+2. You can also choose different extensions but _`php`_ and _`bak`_ will be the most useful ones to find.
+
+## Google Dorks
+
+`site:  
+intitle:  
+inurl:  
+filetype:  
+AND, OR & |  
+-`
+
+[GHDB](https://www.exploit-db.com/google-hacking-database) for more resources.
+
+## XSS \(Cross Site Scripting\)
+
+XSS filter bypass cheatsheet: [OWASP cheatsheet](https://owasp.org/www-community/xss-filter-evasion-cheatsheet)
+
+**Reflected XSS**: Payload is carried inside the request the victim sends to the website. Typically the link contains the malicious payload. 
+
+**Persistent XSS**: Payload remains in the site that multiple users can fall victim to. Typically embedded via a form or forum post.
+
+
 
