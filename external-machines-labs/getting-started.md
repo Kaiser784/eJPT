@@ -1,6 +1,6 @@
 # Getting Started
 
-### Linux
+## Linux
 
 {% tabs %}
 {% tab title="Vulnversity" %}
@@ -12,7 +12,7 @@
 {% endtab %}
 {% endtabs %}
 
-### Windows
+## Windows
 
 {% tabs %}
 {% tab title="Blue" %}

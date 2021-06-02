@@ -1,5 +1,5 @@
 ---
-description: Labs from Course in INE starter pass
+description: Labs from the PTS Course in INE starter pass
 ---
 
 # Course Labs

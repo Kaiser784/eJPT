@@ -4,11 +4,11 @@ description: These are condensed notes from the INE course and other blogs and a
 
 # Cheatsheet/Notes
 
-### Subnet guide
+## Subnet guide
 
 ![TheCybermentor&apos;s subnet guide](../.gitbook/assets/subnet-guide-sheet1.png)
 
-### Common Ports
+## Common Ports
 
 <table>
   <thead>
@@ -75,4 +75,47 @@ description: These are condensed notes from the INE course and other blogs and a
     </tr>
   </tbody>
 </table>
+
+## Routing
+
+{% hint style="danger" %}
+This part is pretty important 😉 
+{% endhint %}
+
+### IP
+
+```text
+ip route add 192.168.72.23 via 10.10.10.10(you)
+```
+
+### Network
+
+```text
+ip route add 192.168.72.0/24 via 10.10.10.10(you)
+```
+
+## Interactive shells
+
+```text
+bash -i
+python -c 'import pty; pty.spawn("/bin/sh")'
+echo os.system('/bin/bash')
+/bin/sh -i
+perl -e 'exec "/bin/sh";'
+perl: exec "/bin/sh";
+ruby: exec "/bin/sh"
+lua: os.execute('/bin/sh')
+```
+
+## Recommended Shells
+
+| Server | Web Shell |
+| :--- | :--- |
+| Windows | ASP  |
+| Apache TomCat | JSP |
+| Apache | PHP |
+
+### Reverse Shells
+
+[Pentest Monkey Cheatsheet](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
 

