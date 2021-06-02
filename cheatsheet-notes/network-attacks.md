@@ -36,7 +36,41 @@ Add`-f` to stop the brute-forcing after finding one valid cred.
 * /usr/share/seclists/Passwords/rockyou-15.txt The above password lists are recommended to run first before the larger rockyou.txt
 * /usr/share/ncrack/minimal.usr for users list.
 
-## Windows Shares
+## Windows Shares using Null Sessions
 
+### Shares Enumeration
 
+```text
+nmblookup -A 10.10.10.10
+```
+
+### List Shares
+
+```text
+smbclient -L //10.10.10.10 -N
+```
+
+### Mount Share
+
+```text
+smbclient //10.10.10.10/sharename -N
+```
+
+### enum4linux
+
+```text
+enum4linux -a 10.10.10.10
+```
+
+The above command does all the previous ones and gives you more data too except mounting the shares, that you have to implement using smbclient.
+
+## ARP Poisoning
+
+### arpspoof
+
+&lt;interface&gt; == eth0/tap0
+
+```text
+arpspoof -i <interface> -t target -r host
+```
 
