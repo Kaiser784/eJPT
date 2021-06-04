@@ -1,7 +1,3 @@
----
-description: Hashes and Passwords
----
-
 # System Attacks
 
 ## John the Ripper
@@ -23,7 +19,7 @@ john --wordlist=/etc/john/rockyou.txt hash --show
 
 ## Hashcat
 
-Google the commands depending on the hash you find using `hashidentifier`
+
 
 
 
