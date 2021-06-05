@@ -84,19 +84,19 @@ This part is pretty important 😉
 
 ### IP
 
-```text
+```bash
 ip route add 192.168.72.23 via 10.10.10.10(you)
 ```
 
 ### Network
 
-```text
+```bash
 ip route add 192.168.72.0/24 via 10.10.10.10(you)
 ```
 
 ## Interactive shells
 
-```text
+```bash
 bash -i
 python -c 'import pty; pty.spawn("/bin/sh")'
 echo os.system('/bin/bash')

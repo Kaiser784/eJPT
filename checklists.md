@@ -21,9 +21,9 @@ For every login prompt try default creds or some other basic ones you find on th
 
 If you find ssh or ftp try to login to them with some creds\(needn't be correct\) the banners might give you some odea of what's going on. Use the team names you find on the sites and blog editors.
 
-
-
 Metasploit usage is not restricted, use it to the fullest potential.
 
 phpinfo\(\);
+
+If you find an ip and are not able to scan it, then there is a high chance that you have to compromise one of the already available machines and scan from there.
 

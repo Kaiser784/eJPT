@@ -6,43 +6,43 @@ description: Information Gathering and Footprinting & Scanning
 
 ## whois
 
-```text
+```bash
 whois foo.bar
 ```
 
 ## subdomains
 
-```text
+```bash
 sublit3r -d foo.bar
 ```
 
 ## ping sweeps
 
-```text
+```bash
 fping -a -g 10.10.10.0/24
 ```
 
-```text
-nmap -sn 10.10.10.0/24
+```bash
+nmap -sS -n 10.10.10.0/24
 ```
 
 ## Nmap
 
 ### OS Fingerprinting
 
-```text
+```bash
 nmap -Pn -A -O 10.10.10.10
 ```
 
 ### Quick scan 
 
-```text
-nmap -sC -sV -A -T4 10.10.10.10
+```bash
+nmap -sC -sV -A -T4 10.10.10.10 --open
 ```
 
 ### Full scan
 
-```text
-nmap -sC -sV -A -T4 -p- 10.10.10.10
+```bash
+nmap -sC -sV -A -T4 -p- 10.10.10.10 --open
 ```
 
