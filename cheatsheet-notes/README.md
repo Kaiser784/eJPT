@@ -83,7 +83,7 @@ This part is pretty important😉
 {% endhint %}
 
 ```bash
-ip route add 192.168.72.0/24 via 10.10.10.10(VPN Gateway)
+ip route add 172.10.1.0/24 via 10.10.10.10(VPN Gateway)
 ```
 
 If you don't know what the VPN gateway is then try it with every host that is up in the network.

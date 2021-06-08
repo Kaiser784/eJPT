@@ -6,7 +6,7 @@ description: Won't be uploaded
 
 If you find a web page of any kind run dirbuster on it doesn't matter if that webpage is the result of a previous scan.
 
-Use Owasp ZAP for spidering and burpsuite for everything else.
+USe Owasp ZAP for spidering and burpsuite for everything else.
 
 Scan technique
 
@@ -19,7 +19,7 @@ If you're unable to understand what to do with the service you found during your
 
 For every login prompt try default creds or some other basic ones you find on the net.
 
-If you find ssh or ftp try to login to them with some creds\(needn't be correct\) the banners might give you some idea of what's going on. Use the team names you find on the sites and blog editors.
+If you find ssh or ftp try to login to them with some creds\(needn't be correct\) the banners might give you some odea of what's going on. Use the team names you find on the sites and blog editors.
 
 Metasploit usage is not restricted, use it to the fullest potential.
 

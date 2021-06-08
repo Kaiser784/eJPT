@@ -67,6 +67,10 @@ OPTIONS / HTTP/1.0
 
 ![Dirbuster](../.gitbook/assets/dirbuster.png)
 
+1. You can choose different wordlists for the dictionary brute force but from my experience in most labs you can find them in the `common.txt` 
+2. You can also choose different extensions but _`php`_ and _`bak`_ will be the most useful ones to find.
+3. If there is HTTP authentication or login of some other kind for the webpage you can set the creds using \[Oprions -&gt; Advanced Options -&gt; Authentication options\]
+
 ### dirb
 
 ```text
@@ -79,11 +83,6 @@ dirb http://10.10.10.10/
 dirb http://10.10.10.10/ -u <username>:<password>
 ```
 
-1. You can choose different wordlists for the dictionary brute force but from my experience in most labs you can find them in the `common.txt` 
-2. You can also choose different extensions but _`php`_ and _`bak`_ will be the most useful ones to find.
-3. If there is HTTP authentication or login of some other kind for the webpage you can set the creds using \[Options -&gt; Advanced Options -&gt; Authentication options\]
-4. The con with Dirbuster is that it sometimes freezes which is a real bummer otherwise it's real good.
-
 ## Google Dorks
 
 `site:  
@@ -95,11 +94,7 @@ AND, OR & |
 
 [GHDB](https://www.exploit-db.com/google-hacking-database) for more resources.
 
-## XSS \(Cross-Site Scripting\)
-
-1. Find a reflection point
-2. Test with HTML tag \(&lt;h1&gt;Test&lt;/h1&gt;\)
-3. Test with JS code \[alert\('XSS'\)\]
+## XSS \(Cross Site Scripting\)
 
 XSS filter bypass cheatsheet: [OWASP cheatsheet](https://owasp.org/www-community/xss-filter-evasion-cheatsheet)
 
@@ -146,9 +141,9 @@ E.g: **`username=some&password=thing`** where the parameter username is vulnerab
 sqlmap -u 'http://10.10.10.10/login.php' --data='username=some&password=thing' -p username --technique=B
 ```
 
-**The Databases, Users and dump-all switches are the same as for the GET parameter.**
+**The Databases, Users and dump-all switches are same as for the GET parameter.**
 
-If you aren't able to deduce which parameter is vulnerable in POST, you can drop the -p switch. SQLMAP will try to test them and find them on its own so don't sweat it and also for most of the prompts use the default options\(i.e. just press enter\).
+If you aren't able to deduce which parameter is vulnerable in POST, you can drop the -p switch. SQLMAP will try to test them and find it on it's own so don't sweat it and also for most of the prompts use the default options\(i.e. just press enter\).
 
 The --technique switch is to create less noise and prevent the service from shutting down due to query overload. If the given techniques do not work try it removing the switch.
 

