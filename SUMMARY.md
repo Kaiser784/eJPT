@@ -1,6 +1,6 @@
 # Table of contents
 
-* [My eJPT Journey](README.md)
+* [README](README.md)
 * [Cheatsheet/Notes](cheatsheet-notes/README.md)
   * [Enumeration](cheatsheet-notes/enumeration.md)
   * [Web Attacks](cheatsheet-notes/web-attacks.md)

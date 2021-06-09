@@ -79,18 +79,20 @@ description: These are condensed notes from the INE course and other blogs and a
 ## Routing
 
 {% hint style="danger" %}
-This part is pretty important😉 
+This part is pretty important 😉 
 {% endhint %}
 
+### IP
+
 ```bash
-ip route add 172.10.1.0/24 via 10.10.10.10(VPN Gateway)
+ip route add 192.168.72.23 via 10.10.10.10(you)
 ```
 
-If you don't know what the VPN gateway is then try it with every host that is up in the network.
+### Network
 
-If you want external sources for routing/pivoting, you can look at this one I found somewhere in the depths of Reddit \(Don't ask me why Shaq is on it\). 
-
-{% embed url="https://pentest.blog/explore-hidden-networks-with-double-pivoting/" %}
+```bash
+ip route add 192.168.72.0/24 via 10.10.10.10(you)
+```
 
 ## Interactive shells
 
@@ -116,12 +118,4 @@ lua: os.execute('/bin/sh')
 ### Reverse Shells
 
 [Pentest Monkey Cheatsheet](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
-
-## HackTricks
-
-If you're stuck at vulnerability assessment or don't know how to tackle something you can check here for some kind of push
-
-{% embed url="https://book.hacktricks.xyz/" %}
-
-
 
