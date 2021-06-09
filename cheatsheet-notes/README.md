@@ -85,13 +85,13 @@ This part is pretty important 😉
 ### IP
 
 ```bash
-ip route add 192.168.72.23 via 10.10.10.10(you)
+ip route add 192.168.72.23 via 10.10.10.10(VPN Gateway)
 ```
 
 ### Network
 
 ```bash
-ip route add 192.168.72.0/24 via 10.10.10.10(you)
+ip route add 192.168.72.0/24 via 10.10.10.10(VPN Gateway)
 ```
 
 ## Interactive shells
